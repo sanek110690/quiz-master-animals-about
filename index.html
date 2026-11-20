@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Quiz Master: Animals by ABVSoft — an offline Android animal trivia game with 2,000 illustrated questions and eight game modes.">
+<meta name="theme-color" content="#F6F1E5"><title>Quiz Master: Animals — About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F1E5;--paper2:#EAE3D0;--card:#fff;
+  --ink:#171512;--soft:#56514A;--muted:#8F887B;
+  --green:#6DBE45;--mint:#3FB8AF;--terra:#DE6B48;--lav:#8B7BD8;--ochre:#E98A2B;
+  --green-soft:#E4F3D9;--mint-soft:#DDF3F1;--terra-soft:#FAE7E0;--lav-soft:#EAE5FA;
+  --r:24px;--r-sm:18px;
+  --shadow:0 12px 30px rgba(23,21,18,.08);
+  --shadow-sm:0 6px 16px rgba(23,21,18,.06);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:var(--ink);
+  background:
+    radial-gradient(circle at 10% 4%,rgba(109,190,69,.18),transparent 26rem),
+    radial-gradient(circle at 94% 16%,rgba(63,184,175,.15),transparent 28rem),
+    radial-gradient(circle at 50% 102%,rgba(139,123,216,.10),transparent 30rem),
+    var(--paper);
+  font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}
+.container{width:min(960px,calc(100% - 32px));margin:auto;padding:42px 0 56px}
+header{text-align:center;margin-bottom:30px}
+.logo{width:84px;height:84px;margin:0 auto 18px;display:grid;place-items:center;
+  background:linear-gradient(145deg,#7CCB52,var(--green));border-radius:26px;
+  box-shadow:0 14px 32px rgba(109,190,69,.35);transform:rotate(-4deg)}
+.logo svg{width:46px;height:46px;display:block}
+.brand{margin:0;font-size:clamp(26px,6.5vw,46px);line-height:1.1;font-weight:900;letter-spacing:-.8px}
+.brand .edition{color:#5AA336}
+.subtitle{margin:10px 0 0;color:var(--soft);font-size:15px;font-weight:700}
+.only-ru{display:none}.only-en{display:none}
+html[lang="ru"] .only-ru{display:inline}
+html[lang="en"] .only-en{display:inline}
+.lang-switch{display:inline-flex;gap:6px;margin:24px auto 0;padding:5px;background:var(--card);border-radius:16px;box-shadow:var(--shadow-sm)}
+.lang-switch button{border:0;border-radius:12px;padding:9px 16px;background:transparent;color:var(--soft);
+  font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:background .2s,color .2s,box-shadow .2s}
+.lang-switch button:hover{color:var(--ink)}
+.lang-switch button.active{color:#fff;background:var(--green);box-shadow:0 6px 14px rgba(109,190,69,.35)}
+.card{background:var(--card);border-radius:var(--r);padding:28px;margin-bottom:20px;box-shadow:var(--shadow)}
+h1,h2,h3{margin-top:0;line-height:1.2}
+h2{display:inline-block;margin:0 0 18px;padding:7px 16px;border-radius:999px;
+  background:var(--green);color:#fff;font-size:19px;font-weight:900;letter-spacing:.2px;
+  box-shadow:0 8px 18px rgba(109,190,69,.30)}
+section.card:nth-of-type(5n+2) h2{background:var(--mint);box-shadow:0 8px 18px rgba(63,184,175,.30)}
+section.card:nth-of-type(5n+3) h2{background:var(--terra);box-shadow:0 8px 18px rgba(222,107,72,.28)}
+section.card:nth-of-type(5n+4) h2{background:var(--lav);box-shadow:0 8px 18px rgba(139,123,216,.30)}
+section.card:nth-of-type(5n+5) h2{background:var(--ochre);box-shadow:0 8px 18px rgba(233,138,43,.30)}
+h3{margin:0 0 4px;font-size:17px;font-weight:800}
+p{margin:0 0 12px;color:var(--soft)}p:last-child{margin-bottom:0}
+strong{color:var(--ink);font-weight:800}
+.highlight{color:var(--ink);font-weight:800;background:linear-gradient(transparent 58%,rgba(109,190,69,.35) 58%);border-radius:4px;padding:0 2px}
+.lead{color:var(--ink);font-size:17px;font-weight:600}
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.pill{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--green-soft);color:#35691F;font-size:12.5px;font-weight:800}
+.pill:nth-child(4n+2){background:var(--mint-soft);color:#1F6E68}
+.pill:nth-child(4n+3){background:var(--terra-soft);color:#9C4A2E}
+.pill:nth-child(4n+4){background:var(--lav-soft);color:#4F3E9E}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tile{padding:18px;border-radius:var(--r-sm);background:#F1F9EC;box-shadow:var(--shadow-sm);
+  transition:transform .2s ease,box-shadow .2s ease}
+.tile:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(23,21,18,.10)}
+.tile:nth-child(4n+2){background:#E9F6F4}
+.tile:nth-child(4n+3){background:#FBF0EB}
+.tile:nth-child(4n+4){background:#F0ECFA}
+.tile p{margin:0;font-size:14px}
+.tile h3{display:flex;align-items:center;gap:10px}
+.badge{display:inline-grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:11px;
+  background:#fff;box-shadow:0 4px 10px rgba(23,21,18,.07);font-size:17px}
+.worlds{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:12px 0 0}
+.worlds span{text-align:center;padding:8px 4px;border-radius:10px;background:var(--green-soft);
+  color:#35691F;font-size:12px;font-weight:800}
+details{margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--paper);box-shadow:var(--shadow-sm)}
+details p{margin-top:8px}
+summary{cursor:pointer;font-weight:800;color:var(--ink)}
+a{color:#3F7F27;font-weight:800;text-decoration-thickness:2px;text-underline-offset:2px}
+a:hover{color:var(--ink)}
+footer{text-align:center;color:var(--muted);font-size:13px;font-weight:700;padding-top:12px}
+.lang{display:none}.lang.active{display:block}
+@media(max-width:640px){
+  .container{width:min(100% - 22px,960px);padding-top:26px}
+  .card{padding:21px 18px;border-radius:20px}
+  .grid{grid-template-columns:1fr}
+  .worlds{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .brand{letter-spacing:-.5px}
+}
+</style></head><body><div class="container">
+<header>
+  <div class="logo" aria-hidden="true">
+    <svg viewBox="0 0 64 64" role="img" aria-label="Paw">
+      <ellipse cx="32" cy="41" rx="12.5" ry="10.5" fill="#fff"/>
+      <ellipse cx="16.5" cy="29" rx="6" ry="7.5" fill="#fff"/>
+      <ellipse cx="27" cy="21" rx="6" ry="7.5" fill="#fff"/>
+      <ellipse cx="37" cy="21" rx="6" ry="7.5" fill="#fff"/>
+      <ellipse cx="47.5" cy="29" rx="6" ry="7.5" fill="#fff"/>
+    </svg>
+  </div>
+  <h1 class="brand"><span class="only-ru">Квиз Мастер<span class="edition">: Животные</span></span><span class="only-en">Quiz Master<span class="edition">: Animals</span></span></h1>
+  <p class="subtitle"><span class="only-ru">ABVSoft · Тренажёр ума на каждый день</span><span class="only-en">ABVSoft · Your daily brain workout</span></p>
+  <div class="lang-switch" role="group" aria-label="Переключатель языка">
+    <button id="ruBtn" onclick="setLanguage('ru')" type="button">RU · Русский</button>
+    <button id="enBtn" onclick="setLanguage('en')" type="button">EN · English</button>
+  </div>
+</header>
+<main>
+<div id="ru" class="lang">
+<section class="card"><h2>О проекте</h2><p class="lead"><span class="highlight">«Квиз Мастер: Животные»</span> — тематическая викторина для Android о животном мире: тренируйте память, расширяйте кругозор и узнавайте новое о зверях, птицах, рыбах и насекомых каждый день.</p><p>На экране появляется вопрос и <strong>четыре варианта ответа</strong> — только один правильный. После каждого ответа игра показывает короткое объяснение, поэтому вы не просто проверяете знания, а запоминаете интересные факты.</p><p>В издании <strong>2000 вопросов на русском и 2000 на английском языке</strong>. Темы — дикие и домашние животные, рекорды природы, повадки, среда обитания и наука о животных. Восемь игровых режимов, ежедневное испытание, колесо фортуны, достижения и ранги — всё как в классическом «Квиз Мастере».</p><div class="pill-row"><span class="pill">4 варианта ответа</span><span class="pill">2000 вопросов</span><span class="pill">Иллюстрации</span><span class="pill">8 режимов</span><span class="pill">Офлайн-игра</span><span class="pill">Без регистрации</span><span class="pill">RU / EN</span></div></section>
+<section class="card"><h2>Игровые режимы</h2><div class="grid">
+<div class="tile"><h3><span class="badge">🐾</span>Классический</h3><p>15 вопросов без таймера. Играйте в своём темпе и набирайте очки за правильные ответы.</p></div>
+<div class="tile"><h3><span class="badge">⏱️</span>На время</h3><p>15 вопросов и всего 15 секунд на каждый. Здесь важны скорость реакции и точность.</p></div>
+<div class="tile"><h3><span class="badge">🎲</span>Ва-банк</h3><p>Бесконечная серия: первый правильный ответ приносит 25 очков, каждый следующий удваивает банк. Ошибка сжигает банк. Заберите выигрыш в любой момент; один раз за партию доступен «Второй шанс».</p></div>
+<div class="tile"><h3><span class="badge">🗺️</span>Путешествие</h3><p>30 уровней — 5 миров по 6 уровней. На каждом уровне 10 вопросов; выполните норму правильных ответов (6, в финальном мире — 7) и получите до 3 звёзд. Всего можно собрать 90 звёзд.</p><div class="worlds"><span>Мир 1</span><span>Мир 2</span><span>Мир 3</span><span>Мир 4</span><span>Мир 5</span></div></div>
+<div class="tile"><h3><span class="badge">🛡️</span>Без ошибок</h3><p>20 вопросов, одна жизнь и один пропуск в запасе. Ошибка завершает испытание — постарайтесь пройти идеально.</p></div>
+<div class="tile"><h3><span class="badge">💚</span>Выживание</h3><p>Бесконечные вопросы, 10 секунд на ответ и 3 жизни. Один раз за партию жизнь можно сохранить за рекламу.</p></div>
+<div class="tile"><h3><span class="badge">☀️</span>Испытание дня</h3><p>10 вопросов, одинаковых для всех игроков в конкретную дату. Одна попытка в день; за последовательные дни формируется серия.</p></div>
+<div class="tile"><h3><span class="badge">⚔️</span>Дуэль</h3><p>Соревнование до 7 очков с таймером 20 секунд на вопрос. Играйте вдвоём на одном устройстве — верхняя половина экрана повёрнута к другу — или против бота. Дуэль не влияет на основную статистику.</p></div>
+</div><details><summary>Подробнее о соперниках в дуэли</summary><p><strong>Черепаха</strong> думает 6–14 секунд и отвечает правильно примерно в 45% случаев. <strong>Сова</strong> — 4–9 секунд и 65%. <strong>Сокол</strong> — 2,5–6 секунд и 85%. Неверный ответ выбивает участника до конца раунда.</p></details></section>
+<section class="card"><h2>Дополнительные возможности</h2><div class="grid">
+<div class="tile"><h3><span class="badge">🎁</span>Колесо фортуны</h3><p>Одна прокрутка в день. Выигрывайте +50, +100 или +500 очков, временное удвоение очков на 30 минут, а также заряды подсказок — 50/50, заморозку, звонок другу и скип.</p></div>
+<div class="tile"><h3><span class="badge">💡</span>Подсказки</h3><p>50/50, заморозка таймера, звонок другу (до 90% на лёгких вопросах и 50% на экспертных) и дополнительный пропуск в «Без ошибок». Каждая — раз за партию за короткую рекламу; выигранные на колесе срабатывают без рекламы.</p></div>
+<div class="tile"><h3><span class="badge">🔥</span>Очки и комбо</h3><p>10 базовых очков за вопрос, множитель сложности до ×2,5 и множитель серии до ×2. Идеальная партия даёт бонус +50, а на экране результата очки можно удвоить.</p></div>
+<div class="tile"><h3><span class="badge">🏅</span>Ранги</h3><p>Поднимайтесь от Игрока и Новичка до Любителя, Опытного, Знатока, Мастера и Легенды — по мере накопления очков.</p></div>
+<div class="tile"><h3><span class="badge">🏆</span>Достижения</h3><p>56 достижений с отслеживанием прогресса: за сыгранные партии, идеальные результаты, серии ответов, очки, мастерство режимов и прохождение путешествия.</p></div>
+<div class="tile"><h3><span class="badge">📊</span>Статистика</h3><p>Следите за точностью ответов, лучшими результатами, любимыми режимами, прогрессом путешествия, звёздами и историей игр.</p></div>
+</div></section>
+<section class="card"><h2>Сложность</h2><p>Выбирайте подходящий уровень или доверьте подбор игре. Доступны режимы <strong>Микс</strong> (адаптивный), <strong>Лёгкий</strong>, <strong>Средний</strong>, <strong>Сложный</strong> и <strong>Эксперт</strong>. Чем выше сложность, тем выше множитель очков.</p></section>
+<section class="card"><h2>Издания Quiz Master</h2><p><strong>Quiz Master</strong> — классическая викторина с вопросами из науки, космоса, географии, истории, мира животных, спорта, еды и технологий.</p><p><strong>Quiz Master: Animals</strong> — это издание о животном мире: 2000 вопросов с иллюстрацией к каждому, мягкий «природный» дизайн.</p><p><strong>Quiz Master: Famous</strong> — издание о знаменитых людях: учёных, изобретателях, писателях, художниках, музыкантах, политиках и первооткрывателях.</p></section>
+<section class="card"><h2>Офлайн и приватность</h2><p>Вопросы, игровой процесс и сохранение прогресса доступны непосредственно на устройстве. Регистрация и создание аккаунта не требуются.</p><p>Для дополнительных подсказок и некоторых рекламных показов используется реклама Яндекса. Для загрузки рекламы может потребоваться интернет. Персонализацию рекламы можно отключить в настройках приложения.</p><p>Подробности об обработке данных приведены в <a href="https://sanek110690.github.io/quiz-master-animals-privacy-policy/" target="_blank" rel="noopener">Политике конфиденциальности</a>.</p></section>
+<section class="card"><h2>Технологии</h2><div class="grid"><div class="tile"><h3><span class="badge">🤖</span>Android</h3><p>Нативное приложение для Android 7.0 и выше</p></div><div class="tile"><h3><span class="badge">⚙️</span>Kotlin</h3><p>Основной язык разработки</p></div><div class="tile"><h3><span class="badge">🧩</span>Jetpack Compose</h3><p>Современный декларативный интерфейс</p></div><div class="tile"><h3><span class="badge">🗄️</span>Room и DataStore</h3><p>Локальное хранение вопросов и прогресса</p></div></div></section>
+<section class="card"><h2>Контакты</h2><p>Quiz Master разработан <strong>ABVSoft</strong>.</p><p><a href="mailto:abvsoft.apps@gmail.com">abvsoft.apps@gmail.com</a></p></section>
+</div>
+<div id="en" class="lang">
+<section class="card"><h2>About the Project</h2><p class="lead"><span class="highlight">Quiz Master: Animals</span> is a themed Android trivia game about the animal kingdom: train your memory, broaden your knowledge, and learn something new about mammals, birds, fish, and insects every day.</p><p>Each round presents a question with <strong>four answer choices</strong> — only one is correct. After every answer, the game provides a short explanation, so you learn interesting facts while testing what you know.</p><p>The Animals edition includes <strong>2,000 questions in English and 2,000 in Russian</strong>. Topics include wild and domestic animals, nature records, habits, habitats, and animal science. Eight game modes, a daily challenge, a Fortune Wheel, achievements, and ranks — everything from the classic Quiz Master.</p><div class="pill-row"><span class="pill">4 answer choices</span><span class="pill">2,000 questions</span><span class="pill">Illustrations</span><span class="pill">8 game modes</span><span class="pill">Offline gameplay</span><span class="pill">No account</span><span class="pill">EN / RU</span></div></section>
+<section class="card"><h2>Game Modes</h2><div class="grid">
+<div class="tile"><h3><span class="badge">🐾</span>Classic</h3><p>15 questions with no timer. Play at your own pace and earn points for correct answers.</p></div>
+<div class="tile"><h3><span class="badge">⏱️</span>Time Attack</h3><p>15 questions with only 15 seconds for each one. Speed and accuracy are essential.</p></div>
+<div class="tile"><h3><span class="badge">🎲</span>All In</h3><p>An endless streak: the first correct answer earns 25 points, and every next one doubles the pot. A wrong answer burns the pot. Cash out whenever you want; one Second Chance is available per run.</p></div>
+<div class="tile"><h3><span class="badge">🗺️</span>Journey</h3><p>30 levels across 5 worlds, with 6 levels in each. Each level has 10 questions. Meet the target number of correct answers (6, or 7 in the final world) to earn up to 3 stars — 90 stars in total.</p><div class="worlds"><span>World 1</span><span>World 2</span><span>World 3</span><span>World 4</span><span>World 5</span></div></div>
+<div class="tile"><h3><span class="badge">🛡️</span>Perfect</h3><p>20 questions, one life, and one skip in reserve. A mistake ends the challenge — aim for a flawless run.</p></div>
+<div class="tile"><h3><span class="badge">💚</span>Survival</h3><p>Endless questions, 10 seconds per answer, and 3 lives. Once per run you can save a life by watching an ad.</p></div>
+<div class="tile"><h3><span class="badge">☀️</span>Daily Challenge</h3><p>10 questions shared by all players on a given date. You get one attempt per day, and consecutive days build your streak.</p></div>
+<div class="tile"><h3><span class="badge">⚔️</span>Duel</h3><p>A first-to-7-points match with 20 seconds per question. Play with a friend on one device — the top half of the screen faces them — or challenge a bot. Duel results do not affect your main statistics.</p></div>
+</div><details><summary>Meet the Duel opponents</summary><p><strong>Turtle</strong> thinks for 6–14 seconds and has about 45% accuracy. <strong>Owl</strong> takes 4–9 seconds and has 65% accuracy. <strong>Falcon</strong> takes 2.5–6 seconds and has 85% accuracy. A wrong answer knocks a player out for the rest of the round.</p></details></section>
+<section class="card"><h2>Extra Features</h2><div class="grid">
+<div class="tile"><h3><span class="badge">🎁</span>Fortune Wheel</h3><p>One spin per day. Win +50, +100, or +500 points, a temporary double-points boost for 30 minutes, and hint charges — 50/50, timer freeze, phone-a-friend, and skip.</p></div>
+<div class="tile"><h3><span class="badge">💡</span>Hints</h3><p>50/50, timer freeze, phone-a-friend (up to 90% on easy questions and 50% on expert ones), and an extra skip in Perfect mode. One of each per run via a short ad; those won on the wheel work without ads.</p></div>
+<div class="tile"><h3><span class="badge">🔥</span>Points & Combos</h3><p>10 base points per question, a difficulty multiplier up to ×2.5, and a streak multiplier up to ×2. A perfect game earns a +50 bonus, and you can double your points on the results screen.</p></div>
+<div class="tile"><h3><span class="badge">🏅</span>Ranks</h3><p>Climb from Player and Beginner through Amateur, Skilled, Expert, Master, and Legend as you earn points.</p></div>
+<div class="tile"><h3><span class="badge">🏆</span>Achievements</h3><p>Unlock 56 achievements and track your progress across completed games, perfect runs, answer streaks, points, mode mastery, and the Journey.</p></div>
+<div class="tile"><h3><span class="badge">📊</span>Statistics</h3><p>Review your accuracy, best scores, favourite modes, Journey progress, stars, and game history.</p></div>
+</div></section>
+<section class="card"><h2>Difficulty</h2><p>Choose a level that suits you or let the game adapt. Available settings are <strong>Mix</strong> (adaptive), <strong>Easy</strong>, <strong>Medium</strong>, <strong>Hard</strong>, and <strong>Expert</strong>. Higher difficulty brings a higher score multiplier.</p></section>
+<section class="card"><h2>Quiz Master Editions</h2><p><strong>Quiz Master</strong> is the classic edition, featuring science, space, geography, history, animals, sports, food, and technology.</p><p><strong>Quiz Master: Animals</strong> is this edition — the animal kingdom, with 2,000 questions and an illustration for each one, in a soft natural design.</p><p><strong>Quiz Master: Famous</strong> focuses on notable people — scientists, inventors, writers, artists, musicians, politicians, and explorers.</p></section>
+<section class="card"><h2>Offline Play & Privacy</h2><p>Questions, gameplay, and game progress are stored and handled on your device. No registration or account is required.</p><p>Yandex ads are used to provide optional hints and for some ad placements. An internet connection may be required to load ads. Ad personalization can be disabled in the app settings.</p><p>For details about data processing, please read the <a href="https://sanek110690.github.io/quiz-master-animals-privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>.</p></section>
+<section class="card"><h2>Technology</h2><div class="grid"><div class="tile"><h3><span class="badge">🤖</span>Android</h3><p>Native app for Android 7.0 and above</p></div><div class="tile"><h3><span class="badge">⚙️</span>Kotlin</h3><p>Main development language</p></div><div class="tile"><h3><span class="badge">🧩</span>Jetpack Compose</h3><p>Modern declarative UI toolkit</p></div><div class="tile"><h3><span class="badge">🗄️</span>Room & DataStore</h3><p>Local question and progress storage</p></div></div></section>
+<section class="card"><h2>Contact</h2><p>Quiz Master is developed by <strong>ABVSoft</strong>.</p><p><a href="mailto:abvsoft.apps@gmail.com">abvsoft.apps@gmail.com</a></p></section>
+</div>
+</main><footer><span id="footerText"></span></footer></div>
+<script>
+const STORAGE_KEY='quizMasterAnimalsAboutLanguage';
+function setLanguage(language){
+  const selected=language==='ru'?'ru':'en';
+  document.documentElement.lang=selected;
+  document.querySelectorAll('.lang').forEach(el=>el.classList.toggle('active',el.id===selected));
+  document.getElementById('ruBtn').classList.toggle('active',selected==='ru');
+  document.getElementById('enBtn').classList.toggle('active',selected==='en');
+  document.getElementById('footerText').textContent=selected==='ru'?'© 2026 ABVSoft. Все права защищены.':'© 2026 ABVSoft. All rights reserved.';
+  try{localStorage.setItem(STORAGE_KEY,selected)}catch(_){}
+}
+function getInitialLanguage(){
+  try{const saved=localStorage.getItem(STORAGE_KEY);if(saved==='ru'||saved==='en')return saved}catch(_){}
+  return navigator.language&&navigator.language.toLowerCase().startsWith('ru')?'ru':'en';
+}
+setLanguage(getInitialLanguage());
+</script></body></html>
